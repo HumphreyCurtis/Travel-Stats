@@ -99,15 +99,31 @@ function renderMap(world){
       showTooltip(event,visited?.name || feature.properties?.name || 'Country',[visited ? 'Visited' : 'Not yet visited']);
     }).on('mouseleave',hideTooltip);
 
-  const beacons=layer.selectAll('g.beacon').data(cities.filter(city => Number.isFinite(city.lat) && Number.isFinite(city.lon))).join('g')
-    .attr('class','beacon').attr('transform',city => {
+  const labels=[
+    {name:'North America',coordinates:[-105,45]},
+    {name:'South America',coordinates:[-61,-19]},
+    {name:'Europe',coordinates:[18,51]},
+    {name:'Africa',coordinates:[20,5]},
+    {name:'Asia',coordinates:[91,42]},
+    {name:'Australia',coordinates:[135,-27]}
+  ];
+  layer.selectAll('text.map-label').data(labels).join('text').attr('class','map-label')
+    .attr('transform',label => `translate(${projection(label.coordinates).join(',')})`).text(label => label.name);
+
+  const pins=layer.selectAll('g.city-pin').data(cities.filter(city => Number.isFinite(city.lat) && Number.isFinite(city.lon))).join('g')
+    .attr('class','city-pin').attr('transform',city => {
       const point=projection([city.lon,city.lat]);return point ? `translate(${point[0]},${point[1]})` : 'translate(-999,-999)';
     })
     .on('mousemove',(event,city) => showTooltip(event,city.name,[city.country,city.notes])).on('mouseleave',hideTooltip);
-  beacons.append('circle').attr('class','beacon-ring').attr('r',4.4);
-  beacons.append('circle').attr('class','beacon-core').attr('r',1.65);
+  pins.append('line').attr('class','pin-stem').attr('x1',0).attr('y1',3.8).attr('x2',0).attr('y2',7);
+  pins.append('circle').attr('class','pin-ring').attr('r',4.5);
+  pins.append('circle').attr('class','pin-core').attr('r',1.55);
 
-  const zoom=d3.zoom().scaleExtent([1,8]).on('zoom',event => {layer.attr('transform',event.transform);hideTooltip();});
+  const zoom=d3.zoom().scaleExtent([1,8]).on('zoom',event => {
+    layer.attr('transform',event.transform);
+    layer.selectAll('.map-label').style('opacity',event.transform.k > 2 ? 0 : .66);
+    hideTooltip();
+  });
   svg.call(zoom).on('dblclick.zoom',null);
   d3.select('#zoom-in').on('click',() => svg.transition().duration(220).call(zoom.scaleBy,1.6));
   d3.select('#zoom-out').on('click',() => svg.transition().duration(220).call(zoom.scaleBy,.625));

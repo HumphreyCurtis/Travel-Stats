@@ -2,7 +2,7 @@
 
 A lightweight personal travel map inspired by [Golf Stats](https://humphreycurtis.github.io/Golf-Stats/).
 
-Visited countries are shaded ochre on a dark atlas, logged cities and places appear as mint navigation beacons, and both datasets are available in searchable, sortable tables.
+Visited countries are shaded brick red on a vintage expedition map, logged cities and places appear as red pins, and both datasets are available in searchable, sortable tables.
 
 ## Run locally
 
