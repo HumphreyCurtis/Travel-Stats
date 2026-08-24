@@ -75,10 +75,21 @@ function bindTableControls(){
 function renderMap(world){
   const width=960,height=500;
   const svg=d3.select('#map'),mapWrap=d3.select('#map-wrap'),tooltip=d3.select('#tooltip');
-  const projection=d3.geoEqualEarth().fitExtent([[28,24],[width-28,height-24]],{type:'Sphere'});
+  const projection=d3.geoEquirectangular().fitExtent([[14,14],[width-14,height-14]],{type:'Sphere'});
   const path=d3.geoPath(projection);
   const features=topojson.feature(world,world.objects.countries).features;
   const visitedByISO=new Map(countries.map(country => [+country.iso_numeric,country]));
+  const defs=svg.append('defs');
+  const pinHead=defs.append('radialGradient').attr('id','pin-head').attr('cx','32%').attr('cy','27%').attr('r','72%');
+  pinHead.append('stop').attr('offset','0%').attr('stop-color','#ffc2b8');
+  pinHead.append('stop').attr('offset','16%').attr('stop-color','#f05142');
+  pinHead.append('stop').attr('offset','58%').attr('stop-color','#c1241b');
+  pinHead.append('stop').attr('offset','100%').attr('stop-color','#85110d');
+  const pinMetal=defs.append('linearGradient').attr('id','pin-metal').attr('x1','0%').attr('x2','100%');
+  pinMetal.append('stop').attr('offset','0%').attr('stop-color','#3d3937');
+  pinMetal.append('stop').attr('offset','48%').attr('stop-color','#f0e7df');
+  pinMetal.append('stop').attr('offset','68%').attr('stop-color','#77706c');
+  pinMetal.append('stop').attr('offset','100%').attr('stop-color','#262321');
   const layer=svg.append('g').attr('class','map-layer');
 
   layer.append('path').attr('class','map-sphere').attr('d',path({type:'Sphere'}));
@@ -115,9 +126,13 @@ function renderMap(world){
       const point=projection([city.lon,city.lat]);return point ? `translate(${point[0]},${point[1]})` : 'translate(-999,-999)';
     })
     .on('mousemove',(event,city) => showTooltip(event,city.name,[city.country,city.notes])).on('mouseleave',hideTooltip);
-  pins.append('line').attr('class','pin-stem').attr('x1',0).attr('y1',3.8).attr('x2',0).attr('y2',7);
-  pins.append('circle').attr('class','pin-ring').attr('r',4.5);
-  pins.append('circle').attr('class','pin-core').attr('r',1.55);
+  pins.append('circle').attr('class','pin-hit').attr('cx',2.6).attr('cy',-3.2).attr('r',6.5);
+  pins.append('line').attr('class','pin-stem').attr('x1',0).attr('y1',0).attr('x2',1.8).attr('y2',-4.1);
+  pins.append('line').attr('class','pin-stem-highlight').attr('x1',.3).attr('y1',-.35).attr('x2',2).attr('y2',-3.9);
+  pins.append('circle').attr('class','pin-tip').attr('r',.45);
+  pins.append('circle').attr('class','pin-head').attr('cx',2.6).attr('cy',-6).attr('r',3);
+  pins.append('circle').attr('class','pin-rim').attr('cx',2.6).attr('cy',-6).attr('r',2.65);
+  pins.append('ellipse').attr('class','pin-shine').attr('cx',1.7).attr('cy',-6.9).attr('rx',.8).attr('ry',.42).attr('transform','rotate(-25 1.7 -6.9)');
 
   const zoom=d3.zoom().scaleExtent([1,8]).on('zoom',event => {
     layer.attr('transform',event.transform);
