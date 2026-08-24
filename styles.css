@@ -1,20 +1,20 @@
 /* ---------- Design tokens ---------- */
 :root {
-  --page: #e8e2d7;
-  --surface: #f6f1e7;
-  --ink: #292e2e;
-  --muted: #6b6e6a;
-  --line: #d0c7b8;
-  --line-strong: #bdb3a3;
-  --accent: #365762;
-  --map: #385561;
-  --map-grid: #718995;
-  --land: #e6dcc8;
-  --visited: #a54538;
-  --visited-hot: #bd5848;
-  --pin: #294f33;
-  --pin-core: #f5e8c4;
-  --cartography: #777064;
+  --page: #f0eee8;
+  --surface: #f9f7f1;
+  --ink: #302f2a;
+  --muted: #746f65;
+  --line: #d7cfc1;
+  --line-strong: #c6bcac;
+  --accent: #5f6b6c;
+  --map: #cad2d0;
+  --map-grid: #acbcb9;
+  --land: #ddd2bf;
+  --visited: #ad8d70;
+  --visited-hot: #be9b7b;
+  --pin: #315f73;
+  --pin-core: #c9dce4;
+  --cartography: #706452;
 }
 
 /* ---------- Base layout and typography ---------- */
@@ -159,15 +159,15 @@ h2 {
   position: relative;
   width: 11px;
   height: 11px;
-  border: 1px solid #173020;
+  border: 1px solid #183b4a;
   border-radius: 50%;
   background: radial-gradient(
     circle at 32% 25%,
-    #b8d2b3 0 10%,
-    #527759 30%,
-    #294f33 78%
+    #c9dce4 0 10%,
+    #5d8799 30%,
+    #315f73 78%
   );
-  box-shadow: 0 1px 2px rgba(39, 59, 36, 0.3);
+  box-shadow: 0 1px 2px rgba(24, 59, 74, 0.28);
 }
 .legend-pin::after {
   content: "";
@@ -184,12 +184,12 @@ h2 {
 #map-wrap {
   position: relative;
   overflow: hidden;
-  border: 1px solid #606b6b;
-  border-radius: 10px;
+  border: 1px solid #8a806e;
+  border-radius: 7px;
   background: var(--map);
   box-shadow:
-    0 14px 32px rgba(37, 46, 47, 0.16),
-    inset 0 0 60px rgba(19, 34, 39, 0.18);
+    0 7px 18px rgba(65, 57, 44, 0.1),
+    inset 0 0 42px rgba(81, 68, 48, 0.08);
 }
 #map-wrap::after {
   content: "";
@@ -197,18 +197,23 @@ h2 {
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.2;
-  mix-blend-mode: soft-light;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
   background:
     radial-gradient(
       circle at 18% 24%,
-      rgba(244, 229, 201, 0.34),
+      rgba(125, 92, 52, 0.14),
       transparent 24%
     ),
-    radial-gradient(circle at 76% 70%, rgba(16, 30, 36, 0.32), transparent 28%),
+    radial-gradient(circle at 76% 70%, rgba(80, 61, 39, 0.1), transparent 28%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(105, 84, 55, 0.035) 0 1px,
+      transparent 1px 7px
+    ),
     repeating-linear-gradient(
       0deg,
-      rgba(240, 229, 208, 0.11) 0 1px,
+      rgba(94, 76, 51, 0.045) 0 1px,
       transparent 1px 5px
     );
 }
@@ -225,20 +230,20 @@ h2 {
 }
 .map-sphere {
   fill: var(--map);
-  stroke: #4d5f63;
+  stroke: #7e7462;
   stroke-width: 0.8;
 }
 .graticule {
   fill: none;
   stroke: var(--map-grid);
   stroke-width: 0.65;
-  opacity: 0.55;
+  opacity: 0.42;
   vector-effect: non-scaling-stroke;
 }
 .country {
   fill: var(--land);
   stroke: var(--cartography);
-  stroke-width: 0.72;
+  stroke-width: 0.62;
   vector-effect: non-scaling-stroke;
   transition: fill 0.12s ease;
 }
@@ -246,13 +251,13 @@ h2 {
   fill: var(--visited);
 }
 .country:hover {
-  fill: #f2e9d7;
+  fill: #e8dcc4;
 }
 .country.visited:hover {
   fill: var(--visited-hot);
 }
 .map-label {
-  fill: #4d4a43;
+  fill: #5b5143;
   font-family: "Fraunces", Georgia, serif;
   font-size: 10px;
   font-weight: 600;
@@ -260,12 +265,12 @@ h2 {
   text-anchor: middle;
   text-transform: uppercase;
   pointer-events: none;
-  opacity: 0.7;
-  text-shadow: 0 1px rgba(250, 244, 231, 0.62);
+  opacity: 0.66;
+  text-shadow: 0 1px rgba(239, 227, 204, 0.48);
 }
 .city-pin {
   cursor: pointer;
-  filter: drop-shadow(0 0.5px 0.5px rgba(35, 52, 31, 0.32));
+  filter: drop-shadow(0 0.5px 0.5px rgba(22, 51, 63, 0.3));
 }
 .pin-hit {
   fill: transparent;
@@ -286,20 +291,20 @@ h2 {
 }
 .pin-head {
   fill: url(#pin-head);
-  stroke: #142d1c;
+  stroke: #183b4a;
   stroke-width: 0.35;
   vector-effect: non-scaling-stroke;
   transition: r 0.12s ease;
 }
 .pin-rim {
   fill: none;
-  stroke: rgba(190, 218, 183, 0.68);
+  stroke: rgba(187, 214, 224, 0.7);
   stroke-width: 0.3;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
 }
 .pin-shine {
-  fill: rgba(237, 247, 230, 0.8);
+  fill: rgba(237, 246, 249, 0.86);
   pointer-events: none;
 }
 .pin-tip {
@@ -324,18 +329,18 @@ h2 {
   min-width: 34px;
   height: 34px;
   padding: 0 10px;
-  border: 1px solid rgba(44, 64, 69, 0.38);
+  border: 1px solid rgba(94, 79, 57, 0.34);
   border-radius: 7px;
-  background: rgba(246, 239, 224, 0.93);
-  color: #34494f;
+  background: rgba(241, 232, 215, 0.92);
+  color: #534b3f;
   font:
     700 14px/1 "Inter",
     sans-serif;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(24, 39, 44, 0.2);
+  box-shadow: 0 2px 7px rgba(66, 55, 40, 0.14);
 }
 .map-controls button:hover {
-  background: #fffaf0;
+  background: #faf4e8;
 }
 .map-controls .reset {
   font-size: 10px;
@@ -347,26 +352,26 @@ h2 {
   z-index: 4;
   max-width: 240px;
   padding: 8px 11px;
-  border: 1px solid rgba(229, 220, 200, 0.24);
+  border: 1px solid rgba(235, 222, 197, 0.24);
   border-radius: 7px;
-  background: rgba(35, 49, 53, 0.97);
-  color: #f7f0e3;
+  background: rgba(62, 55, 45, 0.97);
+  color: #f7efdf;
   font-size: 12px;
   line-height: 1.4;
   pointer-events: none;
   opacity: 0;
   transform: translate(12px, 10px);
   transition: opacity 0.1s ease;
-  box-shadow: 0 8px 24px rgba(21, 31, 34, 0.32);
+  box-shadow: 0 8px 24px rgba(56, 45, 31, 0.26);
 }
 .tooltip strong {
   display: block;
-  color: #f0d7a4;
+  color: #ead09c;
   font-size: 12.5px;
 }
 .tooltip span {
   display: block;
-  color: #d8d5ca;
+  color: #ddd2bd;
 }
 
 /* ---------- Search controls and data tables ---------- */
@@ -401,7 +406,7 @@ h2 {
   cursor: pointer;
 }
 .sort-btn:hover {
-  border-color: #78919a;
+  border-color: #849b98;
 }
 .sort-btn.active {
   border-color: var(--accent);
@@ -442,7 +447,7 @@ tbody tr:last-child td {
   border-bottom: 0;
 }
 tbody tr:hover td {
-  background: #ebe6db;
+  background: #eee9de;
 }
 .flag {
   margin-right: 8px;
@@ -455,8 +460,8 @@ tbody tr:hover td {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 999px;
-  background: #e5e0d5;
-  color: #485355;
+  background: #e8e3d9;
+  color: #515957;
   font-size: 11px;
 }
 .load-error {

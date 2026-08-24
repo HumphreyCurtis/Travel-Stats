@@ -153,10 +153,10 @@ function renderMap(world) {
     .attr("cx", "32%")
     .attr("cy", "27%")
     .attr("r", "72%");
-  pinHead.append("stop").attr("offset", "0%").attr("stop-color", "#c7ddc1");
-  pinHead.append("stop").attr("offset", "16%").attr("stop-color", "#638669");
-  pinHead.append("stop").attr("offset", "58%").attr("stop-color", "#345b3d");
-  pinHead.append("stop").attr("offset", "100%").attr("stop-color", "#183521");
+  pinHead.append("stop").attr("offset", "0%").attr("stop-color", "#c9dce4");
+  pinHead.append("stop").attr("offset", "16%").attr("stop-color", "#5d8799");
+  pinHead.append("stop").attr("offset", "58%").attr("stop-color", "#315f73");
+  pinHead.append("stop").attr("offset", "100%").attr("stop-color", "#183b4a");
   const pinMetal = defs
     .append("linearGradient")
     .attr("id", "pin-metal")
