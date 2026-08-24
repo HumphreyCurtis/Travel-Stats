@@ -456,14 +456,6 @@ tbody tr:hover td {
 .name {
   font-weight: 600;
 }
-.pill {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: #e8e3d9;
-  color: #515957;
-  font-size: 11px;
-}
 .load-error {
   display: none;
   margin: 0 0 24px;
@@ -521,9 +513,6 @@ footer.wrap {
   th,
   td {
     padding: 9px 11px;
-  }
-  .notes-col {
-    min-width: 210px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

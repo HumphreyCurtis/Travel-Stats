@@ -87,10 +87,6 @@ function renderCities(filter = "") {
   rows.selectAll("*").remove();
   rows.append("td").text((city) => city.name);
   rows.append("td").text((city) => city.country);
-  rows.append("td").each(function (city) {
-    if (city.notes)
-      d3.select(this).append("span").attr("class", "pill").text(city.notes);
-  });
 }
 
 // Keep the quick-sort buttons and clickable table headings in sync.
@@ -249,7 +245,7 @@ function renderMap(world) {
         : "translate(-999,-999)";
     })
     .on("mousemove", (event, city) =>
-      showTooltip(event, city.name, [city.country, city.notes]),
+      showTooltip(event, city.name, [city.country]),
     )
     .on("mouseleave", hideTooltip);
   pins
