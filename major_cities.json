@@ -1,126 +1,870 @@
 [
-  {"name": "London", "country": "United Kingdom", "notes": ""},
-  {"name": "Halifax", "country": "Canada", "notes": ""},
-  {"name": "New York", "country": "United States", "notes": ""},
-  {"name": "Philadelphia", "country": "United States", "notes": ""},
-  {"name": "Washington, DC", "country": "United States", "notes": ""},
-  {"name": "Charleston", "country": "United States", "notes": ""},
-  {"name": "Myrtle Beach", "country": "United States", "notes": ""},
-  {"name": "Miami", "country": "United States", "notes": ""},
-  {"name": "New Orleans", "country": "United States", "notes": ""},
-  {"name": "San Francisco", "country": "United States", "notes": ""},
-  {"name": "Sacramento", "country": "United States", "notes": ""},
-  {"name": "Seattle", "country": "United States", "notes": ""},
-  {"name": "Sandy Lane", "country": "Barbados", "notes": ""},
-  {"name": "Porto", "country": "Portugal", "notes": ""},
-  {"name": "Algarve", "country": "Portugal", "notes": "region, not a single city"},
-  {"name": "Madrid", "country": "Spain", "notes": ""},
-  {"name": "Alicante", "country": "Spain", "notes": ""},
-  {"name": "Baiona", "country": "Spain", "notes": "Galicia, Pontevedra province — wedding"},
-  {"name": "Salamanca", "country": "Spain", "notes": ""},
-  {"name": "Barcelona", "country": "Spain", "notes": ""},
-  {"name": "Nice", "country": "France", "notes": ""},
-  {"name": "Cannes", "country": "France", "notes": ""},
-  {"name": "Viareggio", "country": "Italy", "notes": "Tuscany"},
-  {"name": "Pisa", "country": "Italy", "notes": "Tuscany"},
-  {"name": "Florence", "country": "Italy", "notes": "Tuscany"},
-  {"name": "Amsterdam", "country": "Netherlands", "notes": ""},
-  {"name": "Grenoble", "country": "France", "notes": ""},
-  {"name": "Geneva", "country": "Switzerland", "notes": ""},
-  {"name": "Prague", "country": "Czech Republic", "notes": ""},
-  {"name": "Budapest", "country": "Hungary", "notes": ""},
-  {"name": "Vienna", "country": "Austria", "notes": ""},
-  {"name": "Berlin", "country": "Germany", "notes": ""},
-  {"name": "Hamburg", "country": "Germany", "notes": ""},
-  {"name": "St. Anton am Arlberg", "country": "Austria", "notes": "ski trip"},
-  {"name": "Dublin", "country": "Ireland", "notes": ""},
-  {"name": "Cork", "country": "Ireland", "notes": ""},
-  {"name": "Newport", "country": "United Kingdom", "notes": "Wales"},
-  {"name": "Bristol", "country": "United Kingdom", "notes": "England"},
-  {"name": "Exeter", "country": "United Kingdom", "notes": "England, Devon"},
-  {"name": "Plymouth", "country": "United Kingdom", "notes": "England, Devon"},
-  {"name": "Falmouth", "country": "United Kingdom", "notes": "England, Cornwall"},
-  {"name": "St. Austell", "country": "United Kingdom", "notes": "England, Cornwall"},
-  {"name": "Weymouth", "country": "United Kingdom", "notes": "England, Dorset"},
-  {"name": "Bournemouth", "country": "United Kingdom", "notes": "England, Dorset"},
-  {"name": "Poole", "country": "United Kingdom", "notes": "England, Dorset"},
-  {"name": "Canterbury", "country": "United Kingdom", "notes": "England"},
-  {"name": "Norwich", "country": "United Kingdom", "notes": "England"},
-  {"name": "Birmingham", "country": "United Kingdom", "notes": "England"},
-  {"name": "Liverpool", "country": "United Kingdom", "notes": "England"},
-  {"name": "Manchester", "country": "United Kingdom", "notes": "England"},
-  {"name": "Edinburgh", "country": "United Kingdom", "notes": "Scotland"},
-  {"name": "St Andrews", "country": "United Kingdom", "notes": "Scotland"},
-  {"name": "Istanbul", "country": "Turkey", "notes": ""},
-  {"name": "Athens", "country": "Greece", "notes": ""},
-  {"name": "Crete", "country": "Greece", "notes": ""},
-  {"name": "Mykonos", "country": "Greece", "notes": "unconfirmed spelling — heard as 'Meccanos'"},
-  {"name": "Nicosia", "country": "Cyprus", "notes": ""},
-  {"name": "Durban", "country": "South Africa", "notes": ""},
-  {"name": "Johannesburg", "country": "South Africa", "notes": ""},
-  {"name": "Cape Town", "country": "South Africa", "notes": ""},
-  {"name": "Pietermaritzburg", "country": "South Africa", "notes": "unconfirmed — heard as 'Peter Marksberg'"},
-  {"name": "Dubai", "country": "United Arab Emirates", "notes": ""},
-  {"name": "Tokyo", "country": "Japan", "notes": ""},
-  {"name": "Kyoto", "country": "Japan", "notes": ""},
-  {"name": "Honolulu", "country": "United States", "notes": "Hawaii"},
-  {"name": "Kailua", "country": "United States", "notes": "Hawaii"},
-  {"name": "Monte Carlo", "country": "Monaco", "notes": ""},
-  {"name": "Lyon", "country": "France", "notes": ""},
-  {"name": "Chamonix", "country": "France", "notes": "unconfirmed — heard as 'Harmony'"},
-  {"name": "Annecy", "country": "France", "notes": ""},
-  {"name": "Munich", "country": "Germany", "notes": ""},
-  {"name": "Sun City", "country": "South Africa", "notes": "resort town, Gary Player Country Club"},
-  {"name": "Pawleys Island", "country": "United States", "notes": "South Carolina — distinct from Myrtle Beach, 8+ golf courses played there"},
-  {"name": "Paphos", "country": "Cyprus", "notes": ""},
-  {"name": "Livermore", "country": "United States", "notes": "California wine country"},
-  {"name": "Sunningdale", "country": "United Kingdom", "notes": "Berkshire"},
-  {"name": "Ascot", "country": "United Kingdom", "notes": "Berkshire"},
-  {"name": "Stoke Poges", "country": "United Kingdom", "notes": "Buckinghamshire"},
-  {"name": "Oxford", "country": "United Kingdom", "notes": ""},
-  {"name": "Cambridge", "country": "United Kingdom", "notes": ""},
-  {"name": "Rye", "country": "United Kingdom", "notes": "East Sussex"},
-  {"name": "Sandwich", "country": "United Kingdom", "notes": "Kent"},
-  {"name": "Deal", "country": "United Kingdom", "notes": "Kent"},
-  {"name": "Wimbledon", "country": "United Kingdom", "notes": "London"},
-  {"name": "Woking", "country": "United Kingdom", "notes": "Surrey"},
-  {"name": "Sevenoaks", "country": "United Kingdom", "notes": "Kent"},
-  {"name": "Southend-on-Sea", "country": "United Kingdom", "notes": "Essex"},
-  {"name": "Stoke-on-Trent", "country": "United Kingdom", "notes": "Staffordshire"},
-  {"name": "Waterville", "country": "Ireland", "notes": "County Kerry — did not play Waterville Golf Links there"},
-  {"name": "Lymington", "country": "United Kingdom", "notes": "Hampshire, New Forest"},
-  {"name": "Christchurch", "country": "United Kingdom", "notes": "Dorset"},
-  {"name": "Dawlish", "country": "United Kingdom", "notes": "Devon"},
-  {"name": "Teignmouth", "country": "United Kingdom", "notes": "Devon"},
-  {"name": "Padstow", "country": "United Kingdom", "notes": "Cornwall"},
-  {"name": "Truro", "country": "United Kingdom", "notes": "Cornwall — county town"},
-  {"name": "Pretoria", "country": "South Africa", "notes": ""},
-  {"name": "San Ramon", "country": "United States", "notes": "California, Bay Area"},
-  {"name": "Oakland", "country": "United States", "notes": "California, Bay Area"},
-  {"name": "Castro Valley", "country": "United States", "notes": "California, Bay Area"},
-  {"name": "Alameda", "country": "United States", "notes": "California, Bay Area"},
-  {"name": "Pleasanton", "country": "United States", "notes": "California, Bay Area"},
-  {"name": "Dublin", "country": "United States", "notes": "California, Bay Area — distinct from Dublin, Ireland"},
-  {"name": "Hayward", "country": "United States", "notes": "California, Bay Area"},
-  {"name": "Georgetown", "country": "United States", "notes": "South Carolina — historic town, DeBordieu"},
-  {"name": "Lyndhurst", "country": "United Kingdom", "notes": "Hampshire — capital of the New Forest"},
-  {"name": "Marlborough", "country": "United Kingdom", "notes": "Wiltshire — market town"},
-  {"name": "Murrells Inlet", "country": "United States", "notes": "South Carolina"},
-  {"name": "Surbiton", "country": "United Kingdom", "notes": "Surrey/London"},
-  {"name": "Tidworth", "country": "United Kingdom", "notes": "Wiltshire — garrison town"},
-  {"name": "Walton-on-Thames", "country": "United Kingdom", "notes": "Surrey"},
-  {"name": "Croydon", "country": "United Kingdom", "notes": "London"},
-  {"name": "St. John's", "country": "Canada", "notes": "Newfoundland and Labrador"},
-  {"name": "Lunenburg", "country": "Canada", "notes": "Nova Scotia — UNESCO World Heritage town"},
-  {"name": "Mont Saint-Michel", "country": "France", "notes": "Normandy — the island abbey/fortress"},
-  {"name": "Camberley", "country": "United Kingdom", "notes": "Surrey"},
-  {"name": "Reigate", "country": "United Kingdom", "notes": "Surrey"},
-  {"name": "West Byfleet", "country": "United Kingdom", "notes": "Surrey"},
-  {"name": "Ferndown", "country": "United Kingdom", "notes": "Dorset"},
-  {"name": "New Milton", "country": "United Kingdom", "notes": "Hampshire"},
-  {"name": "Liphook", "country": "United Kingdom", "notes": "Hampshire"},
-  {"name": "Portmarnock", "country": "Ireland", "notes": "Co. Dublin"},
-  {"name": "University Place", "country": "United States", "notes": "Washington, near Tacoma — Chambers Bay"},
-  {"name": "Carshalton", "country": "United Kingdom", "notes": "Surrey/South London — The Oaks GC and NHS shadowing placement (St Helier's Hospital)"},
-  {"name": "Elounda", "country": "Greece", "notes": "Crete — more specific than the general Crete entry, Porto Elounda"}
+  {
+    "name": "London",
+    "country": "United Kingdom",
+    "notes": "",
+    "lat": 51.51,
+    "lon": -0.13
+  },
+  {
+    "name": "Halifax",
+    "country": "Canada",
+    "notes": "",
+    "lat": 44.65,
+    "lon": -63.57
+  },
+  {
+    "name": "New York",
+    "country": "United States",
+    "notes": "",
+    "lat": 40.71,
+    "lon": -74.01
+  },
+  {
+    "name": "Philadelphia",
+    "country": "United States",
+    "notes": "",
+    "lat": 39.95,
+    "lon": -75.17
+  },
+  {
+    "name": "Washington, DC",
+    "country": "United States",
+    "notes": "",
+    "lat": 38.91,
+    "lon": -77.04
+  },
+  {
+    "name": "Charleston",
+    "country": "United States",
+    "notes": "",
+    "lat": 32.78,
+    "lon": -79.93
+  },
+  {
+    "name": "Myrtle Beach",
+    "country": "United States",
+    "notes": "",
+    "lat": 33.69,
+    "lon": -78.89
+  },
+  {
+    "name": "Miami",
+    "country": "United States",
+    "notes": "",
+    "lat": 25.76,
+    "lon": -80.19
+  },
+  {
+    "name": "New Orleans",
+    "country": "United States",
+    "notes": "",
+    "lat": 29.95,
+    "lon": -90.07
+  },
+  {
+    "name": "San Francisco",
+    "country": "United States",
+    "notes": "",
+    "lat": 37.77,
+    "lon": -122.42
+  },
+  {
+    "name": "Sacramento",
+    "country": "United States",
+    "notes": "",
+    "lat": 38.58,
+    "lon": -121.49
+  },
+  {
+    "name": "Seattle",
+    "country": "United States",
+    "notes": "",
+    "lat": 47.61,
+    "lon": -122.33
+  },
+  {
+    "name": "Sandy Lane",
+    "country": "Barbados",
+    "notes": "",
+    "lat": 13.19,
+    "lon": -59.64
+  },
+  {
+    "name": "Porto",
+    "country": "Portugal",
+    "notes": "",
+    "lat": 41.15,
+    "lon": -8.61
+  },
+  {
+    "name": "Algarve",
+    "country": "Portugal",
+    "notes": "region, not a single city",
+    "lat": 37.1,
+    "lon": -8.15
+  },
+  {
+    "name": "Madrid",
+    "country": "Spain",
+    "notes": "",
+    "lat": 40.42,
+    "lon": -3.7
+  },
+  {
+    "name": "Alicante",
+    "country": "Spain",
+    "notes": "",
+    "lat": 38.35,
+    "lon": -0.48
+  },
+  {
+    "name": "Baiona",
+    "country": "Spain",
+    "notes": "Galicia, Pontevedra province — wedding",
+    "lat": 42.12,
+    "lon": -8.85
+  },
+  {
+    "name": "Salamanca",
+    "country": "Spain",
+    "notes": "",
+    "lat": 40.97,
+    "lon": -5.66
+  },
+  {
+    "name": "Barcelona",
+    "country": "Spain",
+    "notes": "",
+    "lat": 41.39,
+    "lon": 2.17
+  },
+  {
+    "name": "Nice",
+    "country": "France",
+    "notes": "",
+    "lat": 43.7,
+    "lon": 7.27
+  },
+  {
+    "name": "Cannes",
+    "country": "France",
+    "notes": "",
+    "lat": 43.55,
+    "lon": 7.02
+  },
+  {
+    "name": "Viareggio",
+    "country": "Italy",
+    "notes": "Tuscany",
+    "lat": 43.87,
+    "lon": 10.24
+  },
+  {
+    "name": "Pisa",
+    "country": "Italy",
+    "notes": "Tuscany",
+    "lat": 43.72,
+    "lon": 10.4
+  },
+  {
+    "name": "Florence",
+    "country": "Italy",
+    "notes": "Tuscany",
+    "lat": 43.77,
+    "lon": 11.26
+  },
+  {
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "notes": "",
+    "lat": 52.37,
+    "lon": 4.9
+  },
+  {
+    "name": "Grenoble",
+    "country": "France",
+    "notes": "",
+    "lat": 45.19,
+    "lon": 5.72
+  },
+  {
+    "name": "Geneva",
+    "country": "Switzerland",
+    "notes": "",
+    "lat": 46.2,
+    "lon": 6.14
+  },
+  {
+    "name": "Prague",
+    "country": "Czech Republic",
+    "notes": "",
+    "lat": 50.08,
+    "lon": 14.44
+  },
+  {
+    "name": "Budapest",
+    "country": "Hungary",
+    "notes": "",
+    "lat": 47.5,
+    "lon": 19.04
+  },
+  {
+    "name": "Vienna",
+    "country": "Austria",
+    "notes": "",
+    "lat": 48.21,
+    "lon": 16.37
+  },
+  {
+    "name": "Berlin",
+    "country": "Germany",
+    "notes": "",
+    "lat": 52.52,
+    "lon": 13.4
+  },
+  {
+    "name": "Hamburg",
+    "country": "Germany",
+    "notes": "",
+    "lat": 53.55,
+    "lon": 9.99
+  },
+  {
+    "name": "St. Anton am Arlberg",
+    "country": "Austria",
+    "notes": "ski trip",
+    "lat": 47.13,
+    "lon": 10.27
+  },
+  {
+    "name": "Dublin",
+    "country": "Ireland",
+    "notes": "",
+    "lat": 53.35,
+    "lon": -6.26
+  },
+  {
+    "name": "Cork",
+    "country": "Ireland",
+    "notes": "",
+    "lat": 51.9,
+    "lon": -8.47
+  },
+  {
+    "name": "Newport",
+    "country": "United Kingdom",
+    "notes": "Wales",
+    "lat": 51.59,
+    "lon": -2.98
+  },
+  {
+    "name": "Bristol",
+    "country": "United Kingdom",
+    "notes": "England",
+    "lat": 51.45,
+    "lon": -2.59
+  },
+  {
+    "name": "Exeter",
+    "country": "United Kingdom",
+    "notes": "England, Devon",
+    "lat": 50.72,
+    "lon": -3.53
+  },
+  {
+    "name": "Plymouth",
+    "country": "United Kingdom",
+    "notes": "England, Devon",
+    "lat": 50.38,
+    "lon": -4.14
+  },
+  {
+    "name": "Falmouth",
+    "country": "United Kingdom",
+    "notes": "England, Cornwall",
+    "lat": 50.15,
+    "lon": -5.07
+  },
+  {
+    "name": "St. Austell",
+    "country": "United Kingdom",
+    "notes": "England, Cornwall",
+    "lat": 50.34,
+    "lon": -4.79
+  },
+  {
+    "name": "Weymouth",
+    "country": "United Kingdom",
+    "notes": "England, Dorset",
+    "lat": 50.61,
+    "lon": -2.46
+  },
+  {
+    "name": "Bournemouth",
+    "country": "United Kingdom",
+    "notes": "England, Dorset",
+    "lat": 50.72,
+    "lon": -1.88
+  },
+  {
+    "name": "Poole",
+    "country": "United Kingdom",
+    "notes": "England, Dorset",
+    "lat": 50.72,
+    "lon": -1.99
+  },
+  {
+    "name": "Canterbury",
+    "country": "United Kingdom",
+    "notes": "England",
+    "lat": 51.28,
+    "lon": 1.08
+  },
+  {
+    "name": "Norwich",
+    "country": "United Kingdom",
+    "notes": "England",
+    "lat": 52.63,
+    "lon": 1.3
+  },
+  {
+    "name": "Birmingham",
+    "country": "United Kingdom",
+    "notes": "England",
+    "lat": 52.49,
+    "lon": -1.89
+  },
+  {
+    "name": "Liverpool",
+    "country": "United Kingdom",
+    "notes": "England",
+    "lat": 53.41,
+    "lon": -2.98
+  },
+  {
+    "name": "Manchester",
+    "country": "United Kingdom",
+    "notes": "England",
+    "lat": 53.48,
+    "lon": -2.24
+  },
+  {
+    "name": "Edinburgh",
+    "country": "United Kingdom",
+    "notes": "Scotland",
+    "lat": 55.95,
+    "lon": -3.19
+  },
+  {
+    "name": "St Andrews",
+    "country": "United Kingdom",
+    "notes": "Scotland",
+    "lat": 56.34,
+    "lon": -2.8
+  },
+  {
+    "name": "Istanbul",
+    "country": "Turkey",
+    "notes": "",
+    "lat": 41.01,
+    "lon": 28.98
+  },
+  {
+    "name": "Athens",
+    "country": "Greece",
+    "notes": "",
+    "lat": 37.98,
+    "lon": 23.73
+  },
+  {
+    "name": "Crete",
+    "country": "Greece",
+    "notes": "",
+    "lat": 35.24,
+    "lon": 24.81
+  },
+  {
+    "name": "Mykonos",
+    "country": "Greece",
+    "notes": "unconfirmed spelling — heard as 'Meccanos'",
+    "lat": 37.45,
+    "lon": 25.33
+  },
+  {
+    "name": "Nicosia",
+    "country": "Cyprus",
+    "notes": "",
+    "lat": 35.19,
+    "lon": 33.38
+  },
+  {
+    "name": "Durban",
+    "country": "South Africa",
+    "notes": "",
+    "lat": -29.86,
+    "lon": 31.03
+  },
+  {
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "notes": "",
+    "lat": -26.2,
+    "lon": 28.05
+  },
+  {
+    "name": "Cape Town",
+    "country": "South Africa",
+    "notes": "",
+    "lat": -33.92,
+    "lon": 18.42
+  },
+  {
+    "name": "Pietermaritzburg",
+    "country": "South Africa",
+    "notes": "unconfirmed — heard as 'Peter Marksberg'",
+    "lat": -29.6,
+    "lon": 30.38
+  },
+  {
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "notes": "",
+    "lat": 25.2,
+    "lon": 55.27
+  },
+  {
+    "name": "Tokyo",
+    "country": "Japan",
+    "notes": "",
+    "lat": 35.68,
+    "lon": 139.65
+  },
+  {
+    "name": "Kyoto",
+    "country": "Japan",
+    "notes": "",
+    "lat": 35.01,
+    "lon": 135.77
+  },
+  {
+    "name": "Honolulu",
+    "country": "United States",
+    "notes": "Hawaii",
+    "lat": 21.31,
+    "lon": -157.86
+  },
+  {
+    "name": "Kailua",
+    "country": "United States",
+    "notes": "Hawaii",
+    "lat": 21.4,
+    "lon": -157.74
+  },
+  {
+    "name": "Monte Carlo",
+    "country": "Monaco",
+    "notes": "",
+    "lat": 43.74,
+    "lon": 7.43
+  },
+  {
+    "name": "Lyon",
+    "country": "France",
+    "notes": "",
+    "lat": 45.76,
+    "lon": 4.83
+  },
+  {
+    "name": "Chamonix",
+    "country": "France",
+    "notes": "unconfirmed — heard as 'Harmony'",
+    "lat": 45.92,
+    "lon": 6.87
+  },
+  {
+    "name": "Annecy",
+    "country": "France",
+    "notes": "",
+    "lat": 45.9,
+    "lon": 6.13
+  },
+  {
+    "name": "Munich",
+    "country": "Germany",
+    "notes": "",
+    "lat": 48.14,
+    "lon": 11.58
+  },
+  {
+    "name": "Sun City",
+    "country": "South Africa",
+    "notes": "resort town, Gary Player Country Club",
+    "lat": -25.34,
+    "lon": 27.09
+  },
+  {
+    "name": "Pawleys Island",
+    "country": "United States",
+    "notes": "South Carolina — distinct from Myrtle Beach, 8+ golf courses played there",
+    "lat": 33.43,
+    "lon": -79.12
+  },
+  {
+    "name": "Paphos",
+    "country": "Cyprus",
+    "notes": "",
+    "lat": 34.77,
+    "lon": 32.42
+  },
+  {
+    "name": "Livermore",
+    "country": "United States",
+    "notes": "California wine country",
+    "lat": 37.68,
+    "lon": -121.77
+  },
+  {
+    "name": "Sunningdale",
+    "country": "United Kingdom",
+    "notes": "Berkshire",
+    "lat": 51.41,
+    "lon": -0.63
+  },
+  {
+    "name": "Ascot",
+    "country": "United Kingdom",
+    "notes": "Berkshire",
+    "lat": 51.41,
+    "lon": -0.68
+  },
+  {
+    "name": "Stoke Poges",
+    "country": "United Kingdom",
+    "notes": "Buckinghamshire",
+    "lat": 51.55,
+    "lon": -0.59
+  },
+  {
+    "name": "Oxford",
+    "country": "United Kingdom",
+    "notes": "",
+    "lat": 51.75,
+    "lon": -1.26
+  },
+  {
+    "name": "Cambridge",
+    "country": "United Kingdom",
+    "notes": "",
+    "lat": 52.21,
+    "lon": 0.12
+  },
+  {
+    "name": "Rye",
+    "country": "United Kingdom",
+    "notes": "East Sussex",
+    "lat": 50.95,
+    "lon": 0.73
+  },
+  {
+    "name": "Sandwich",
+    "country": "United Kingdom",
+    "notes": "Kent",
+    "lat": 51.28,
+    "lon": 1.34
+  },
+  {
+    "name": "Deal",
+    "country": "United Kingdom",
+    "notes": "Kent",
+    "lat": 51.22,
+    "lon": 1.4
+  },
+  {
+    "name": "Wimbledon",
+    "country": "United Kingdom",
+    "notes": "London",
+    "lat": 51.42,
+    "lon": -0.21
+  },
+  {
+    "name": "Woking",
+    "country": "United Kingdom",
+    "notes": "Surrey",
+    "lat": 51.32,
+    "lon": -0.56
+  },
+  {
+    "name": "Sevenoaks",
+    "country": "United Kingdom",
+    "notes": "Kent",
+    "lat": 51.27,
+    "lon": 0.19
+  },
+  {
+    "name": "Southend-on-Sea",
+    "country": "United Kingdom",
+    "notes": "Essex",
+    "lat": 51.54,
+    "lon": 0.71
+  },
+  {
+    "name": "Stoke-on-Trent",
+    "country": "United Kingdom",
+    "notes": "Staffordshire",
+    "lat": 53,
+    "lon": -2.19
+  },
+  {
+    "name": "Waterville",
+    "country": "Ireland",
+    "notes": "County Kerry — did not play Waterville Golf Links there",
+    "lat": 51.83,
+    "lon": -10.18
+  },
+  {
+    "name": "Lymington",
+    "country": "United Kingdom",
+    "notes": "Hampshire, New Forest",
+    "lat": 50.76,
+    "lon": -1.54
+  },
+  {
+    "name": "Christchurch",
+    "country": "United Kingdom",
+    "notes": "Dorset",
+    "lat": 50.74,
+    "lon": -1.78
+  },
+  {
+    "name": "Dawlish",
+    "country": "United Kingdom",
+    "notes": "Devon",
+    "lat": 50.58,
+    "lon": -3.47
+  },
+  {
+    "name": "Teignmouth",
+    "country": "United Kingdom",
+    "notes": "Devon",
+    "lat": 50.55,
+    "lon": -3.5
+  },
+  {
+    "name": "Padstow",
+    "country": "United Kingdom",
+    "notes": "Cornwall",
+    "lat": 50.54,
+    "lon": -4.94
+  },
+  {
+    "name": "Truro",
+    "country": "United Kingdom",
+    "notes": "Cornwall — county town",
+    "lat": 50.26,
+    "lon": -5.05
+  },
+  {
+    "name": "Pretoria",
+    "country": "South Africa",
+    "notes": "",
+    "lat": -25.75,
+    "lon": 28.19
+  },
+  {
+    "name": "San Ramon",
+    "country": "United States",
+    "notes": "California, Bay Area",
+    "lat": 37.78,
+    "lon": -121.98
+  },
+  {
+    "name": "Oakland",
+    "country": "United States",
+    "notes": "California, Bay Area",
+    "lat": 37.8,
+    "lon": -122.27
+  },
+  {
+    "name": "Castro Valley",
+    "country": "United States",
+    "notes": "California, Bay Area",
+    "lat": 37.69,
+    "lon": -122.09
+  },
+  {
+    "name": "Alameda",
+    "country": "United States",
+    "notes": "California, Bay Area",
+    "lat": 37.77,
+    "lon": -122.24
+  },
+  {
+    "name": "Pleasanton",
+    "country": "United States",
+    "notes": "California, Bay Area",
+    "lat": 37.66,
+    "lon": -121.87
+  },
+  {
+    "name": "Dublin",
+    "country": "United States",
+    "notes": "California, Bay Area — distinct from Dublin, Ireland",
+    "lat": 37.7,
+    "lon": -121.94
+  },
+  {
+    "name": "Hayward",
+    "country": "United States",
+    "notes": "California, Bay Area",
+    "lat": 37.67,
+    "lon": -122.08
+  },
+  {
+    "name": "Georgetown",
+    "country": "United States",
+    "notes": "South Carolina — historic town, DeBordieu",
+    "lat": 33.38,
+    "lon": -79.29
+  },
+  {
+    "name": "Lyndhurst",
+    "country": "United Kingdom",
+    "notes": "Hampshire — capital of the New Forest",
+    "lat": 50.87,
+    "lon": -1.58
+  },
+  {
+    "name": "Marlborough",
+    "country": "United Kingdom",
+    "notes": "Wiltshire — market town",
+    "lat": 51.42,
+    "lon": -1.73
+  },
+  {
+    "name": "Murrells Inlet",
+    "country": "United States",
+    "notes": "South Carolina",
+    "lat": 33.55,
+    "lon": -79.05
+  },
+  {
+    "name": "Surbiton",
+    "country": "United Kingdom",
+    "notes": "Surrey/London",
+    "lat": 51.39,
+    "lon": -0.3
+  },
+  {
+    "name": "Tidworth",
+    "country": "United Kingdom",
+    "notes": "Wiltshire — garrison town",
+    "lat": 51.24,
+    "lon": -1.68
+  },
+  {
+    "name": "Walton-on-Thames",
+    "country": "United Kingdom",
+    "notes": "Surrey",
+    "lat": 51.38,
+    "lon": -0.42
+  },
+  {
+    "name": "Croydon",
+    "country": "United Kingdom",
+    "notes": "London",
+    "lat": 51.38,
+    "lon": -0.1
+  },
+  {
+    "name": "St. John's",
+    "country": "Canada",
+    "notes": "Newfoundland and Labrador",
+    "lat": 47.56,
+    "lon": -52.71
+  },
+  {
+    "name": "Lunenburg",
+    "country": "Canada",
+    "notes": "Nova Scotia — UNESCO World Heritage town",
+    "lat": 44.38,
+    "lon": -64.31
+  },
+  {
+    "name": "Mont Saint-Michel",
+    "country": "France",
+    "notes": "Normandy — the island abbey/fortress",
+    "lat": 48.64,
+    "lon": -1.51
+  },
+  {
+    "name": "Camberley",
+    "country": "United Kingdom",
+    "notes": "Surrey",
+    "lat": 51.34,
+    "lon": -0.75
+  },
+  {
+    "name": "Reigate",
+    "country": "United Kingdom",
+    "notes": "Surrey",
+    "lat": 51.24,
+    "lon": -0.21
+  },
+  {
+    "name": "West Byfleet",
+    "country": "United Kingdom",
+    "notes": "Surrey",
+    "lat": 51.33,
+    "lon": -0.51
+  },
+  {
+    "name": "Ferndown",
+    "country": "United Kingdom",
+    "notes": "Dorset",
+    "lat": 50.8,
+    "lon": -1.9
+  },
+  {
+    "name": "New Milton",
+    "country": "United Kingdom",
+    "notes": "Hampshire",
+    "lat": 50.76,
+    "lon": -1.67
+  },
+  {
+    "name": "Liphook",
+    "country": "United Kingdom",
+    "notes": "Hampshire",
+    "lat": 51.06,
+    "lon": -0.81
+  },
+  {
+    "name": "Portmarnock",
+    "country": "Ireland",
+    "notes": "Co. Dublin",
+    "lat": 53.42,
+    "lon": -6.15
+  },
+  {
+    "name": "University Place",
+    "country": "United States",
+    "notes": "Washington, near Tacoma — Chambers Bay",
+    "lat": 47.24,
+    "lon": -122.51
+  },
+  {
+    "name": "Carshalton",
+    "country": "United Kingdom",
+    "notes": "Surrey/South London — The Oaks GC and NHS shadowing placement (St Helier's Hospital)",
+    "lat": 51.37,
+    "lon": -0.17
+  },
+  {
+    "name": "Elounda",
+    "country": "Greece",
+    "notes": "Crete — more specific than the general Crete entry, Porto Elounda",
+    "lat": 35.26,
+    "lon": 25.72
+  }
 ]

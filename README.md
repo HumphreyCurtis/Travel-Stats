@@ -2,7 +2,7 @@
 
 A lightweight personal travel map inspired by [Golf Stats](https://humphreycurtis.github.io/Golf-Stats/).
 
-Visited countries are shaded blue, logged cities and places appear as red pins, and both datasets are available in searchable, sortable tables.
+Visited countries are shaded ochre on a dark atlas, logged cities and places appear as mint navigation beacons, and both datasets are available in searchable, sortable tables.
 
 ## Run locally
 
@@ -16,6 +16,6 @@ The page has no build step. It uses D3, TopoJSON, and World Atlas from public CD
 
 ## Data
 
-- `countries.json` contains the country list.
-- `major_cities.json` contains the city/place list.
-- `index.html` contains the current deployable snapshot, including coordinates and numeric country identifiers used by the map.
+- `countries.json` is the country source of truth, including the numeric identifiers used by the map.
+- `major_cities.json` is the city/place source of truth, including map coordinates.
+- `index.html`, `styles.css`, and `app.js` contain the structure, design, and behavior.
