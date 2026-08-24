@@ -1,1 +1,90 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A map and record of the countries and cities Humphrey has visited."><title>Humphrey's Travels</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=7"></head><body><header class="page-head"><div class="wrap"><p class="eyebrow">Personal Stats &mdash; Travel</p><h1>Humphrey's Travels</h1><p class="sub">Every country and city logged. Explore the map, or browse the two tables below.</p><div class="stats-strip" id="stats-strip" aria-label="Travel totals"></div></div></header><main class="wrap"><p id="load-error" class="load-error" role="status"></p><section><div class="section-head"><div><h2>The Map</h2><p class="section-sub">Drag to pan, scroll or pinch to zoom, and hover over a country or city.</p></div><div class="legend" aria-label="Map legend"><span><i class="legend-key visited-key"></i>Visited</span> <span><i class="legend-key land-key"></i>Not yet</span> <span><i class="legend-pin"></i>City</span></div></div><div id="map-wrap"><svg id="map" viewBox="0 0 960 500" role="img" aria-label="World map showing countries and cities visited"></svg><div class="map-controls" aria-label="Map controls"><button id="zoom-in" type="button" aria-label="Zoom in">+</button> <button id="zoom-out" type="button" aria-label="Zoom out">&minus;</button> <button id="zoom-reset" class="reset" type="button">Reset</button></div><div class="tooltip" id="tooltip" aria-hidden="true"></div></div></section><section><h2>Countries</h2><p class="section-sub" id="countries-count"></p><div class="controls"><input id="country-search" placeholder="Filter countries..." autocomplete="off"> <button class="sort-btn active" type="button" data-country-sort="name">A&ndash;Z</button> <button class="sort-btn" type="button" data-country-sort="continent">By Continent</button></div><div class="table-wrap"><table id="countries-table"><thead><tr><th data-key="name">Country</th><th data-key="continent">Continent</th><th data-key="regions_visited">Regions visited</th></tr></thead><tbody></tbody></table></div></section><section><h2>Cities</h2><p class="section-sub" id="cities-count"></p><div class="controls"><input id="city-search" placeholder="Filter cities..." autocomplete="off"> <button class="sort-btn active" type="button" data-city-sort="name">A&ndash;Z</button> <button class="sort-btn" type="button" data-city-sort="country">By Country</button></div><div class="table-wrap"><table id="cities-table"><thead><tr><th data-key="name">City or place</th><th data-key="country">Country</th><th class="notes-col" data-key="notes">Notes</th></tr></thead><tbody></tbody></table></div></section></main><footer class="wrap"><span id="footer-counts"></span> &middot; Built with D3.js</footer><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script><script src="app.js?v=7"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A map and record of the countries and cities Humphrey has visited.">
+  <title>Humphrey's Travels</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Personal Stats &mdash; Travel</p>
+      <h1>Humphrey's Travels</h1>
+      <p class="sub">Every country and city logged. Explore the map, or browse the two tables below.</p>
+      <div class="stats-strip" id="stats-strip" aria-label="Travel totals"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="load-error" class="load-error" role="status"></p>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>The Map</h2>
+          <p class="section-sub">Drag to pan, scroll or pinch to zoom, and hover over a country or city.</p>
+        </div>
+        <div class="legend" aria-label="Map legend">
+          <span><i class="legend-key visited-key"></i>Visited</span>
+          <span><i class="legend-key land-key"></i>Not yet</span>
+          <span><i class="legend-pin"></i>City</span>
+        </div>
+      </div>
+
+      <div id="map-wrap">
+        <svg id="map" viewBox="0 0 960 500" role="img" aria-label="World map showing countries and cities visited"></svg>
+        <div class="map-controls" aria-label="Map controls">
+          <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+          <button id="zoom-out" type="button" aria-label="Zoom out">&minus;</button>
+          <button id="zoom-reset" class="reset" type="button">Reset</button>
+        </div>
+        <div class="tooltip" id="tooltip" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Countries</h2>
+      <p class="section-sub" id="countries-count"></p>
+      <div class="controls">
+        <input type="text" id="country-search" placeholder="Filter countries..." autocomplete="off">
+        <button class="sort-btn active" type="button" data-country-sort="name">A&ndash;Z</button>
+        <button class="sort-btn" type="button" data-country-sort="continent">By Continent</button>
+      </div>
+      <div class="table-wrap">
+        <table id="countries-table">
+          <thead><tr><th data-key="name">Country</th><th data-key="continent">Continent</th><th data-key="regions_visited">Regions visited</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cities</h2>
+      <p class="section-sub" id="cities-count"></p>
+      <div class="controls">
+        <input type="text" id="city-search" placeholder="Filter cities..." autocomplete="off">
+        <button class="sort-btn active" type="button" data-city-sort="name">A&ndash;Z</button>
+        <button class="sort-btn" type="button" data-city-sort="country">By Country</button>
+      </div>
+      <div class="table-wrap">
+        <table id="cities-table">
+          <thead><tr><th data-key="name">City or place</th><th data-key="country">Country</th><th class="notes-col" data-key="notes">Notes</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span id="footer-counts"></span> &middot; Built with D3.js</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+  <script src="app.js?v=7"></script>
+</body>
+</html>
