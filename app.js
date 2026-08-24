@@ -64,9 +64,6 @@ function renderCountries(filter = "") {
     d3.select(this).append("span").attr("class", "name").text(country.name);
   });
   rows.append("td").text((country) => country.continent);
-  rows
-    .append("td")
-    .text((country) => country.regions_visited?.join(", ") || "—");
 }
 
 function renderCities(filter = "") {
